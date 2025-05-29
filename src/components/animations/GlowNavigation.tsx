@@ -43,7 +43,6 @@ const sharedTransition = {
   damping: 20,
   duration: 0.5,
 };
-console.log(navigationData);
 
 export const GlowNavigation = () => {
   const [activeItem, setActiveItem] = useState<string>("");

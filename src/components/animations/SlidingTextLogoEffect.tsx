@@ -1,5 +1,8 @@
+"use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { SlidingTextProps, SlidingLogoProps } from "@/types";
+import Image from "next/image";
 
 export const SlidingText: React.FC<SlidingTextProps> = ({
   firstText,
@@ -21,7 +24,13 @@ export const SlidingText: React.FC<SlidingTextProps> = ({
     >
       {logo && (
         <span>
-          <img className="w-8 h-8" src={logo} />
+          <Image
+            width={32}
+            height={32}
+            alt="Logo"
+            className="w-8 h-8"
+            src={logo}
+          />
         </span>
       )}
       <div
@@ -42,7 +51,6 @@ export const SlidingText: React.FC<SlidingTextProps> = ({
   );
 };
 
-
 export const SlidingLogo: React.FC<SlidingLogoProps> = ({
   FirstIcon,
   SecondIcon,
@@ -54,7 +62,7 @@ export const SlidingLogo: React.FC<SlidingLogoProps> = ({
 
   return (
     <div
-      className={` flex items-center justify-between ${className} px-4 py-3  rounded-xl transition-colors duration-200 `}
+      className={`flex items-center justify-between ${className} px-4 py-3 rounded-xl transition-colors duration-200`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -71,15 +79,15 @@ export const SlidingLogo: React.FC<SlidingLogoProps> = ({
           <div className="h-8 flex items-center justify-center">
             <FirstIcon
               className={`w-5 h-5 ${
-                name == "Contact Me" ? "text-white" : "text-gray-500"
-              } `}
+                name === "Contact Me" ? "text-white" : "text-gray-500"
+              }`}
             />
           </div>
           <div className="h-8 flex items-center justify-center">
             <SecondIcon
               className={`w-5 h-5 ${
-                name == "Contact Me" ? "text-white" : "text-gray-500"
-              } `}
+                name === "Contact Me" ? "text-white" : "text-gray-500"
+              }`}
             />
           </div>
         </motion.div>

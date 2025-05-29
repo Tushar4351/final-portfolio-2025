@@ -1,5 +1,7 @@
 //Navbar types
 import type { Variants } from "framer-motion";
+import { IconType } from "react-icons";
+
 interface NavigationItem {
   id: number;
   title: string;
