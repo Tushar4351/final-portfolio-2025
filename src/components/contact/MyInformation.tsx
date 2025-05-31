@@ -39,10 +39,10 @@ const MyInformation = () => {
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
                   <Image
-                    src="/location.png"
+                    src="/images/contact/location.png"
                     alt="my location"
                     width={500}
-                    height={500}
+                    height={600}
                     className="h-full w-full object-cover rounded-xl"
                   />
                 </motion.div>
@@ -57,11 +57,11 @@ const MyInformation = () => {
                 transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
               >
                 <Image
-                  src="/face.png"
+                  src="/images/contact/face.png"
                   alt="my logo"
-                  width={80}
-                  height={80}
-                  className="size-20"
+                  width={50}
+                  height={0}
+                  className="size-18"
                 />
               </motion.div>
             </div>

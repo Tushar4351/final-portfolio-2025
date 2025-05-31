@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
+import PageTransition from "@/components/animations/PageTransition";
 
 const rubik = Rubik({
   variable: "--font-rubik",
@@ -23,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={rubik.variable}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased"><PageTransition>{children}</PageTransition></body>
     </html>
   );
 }

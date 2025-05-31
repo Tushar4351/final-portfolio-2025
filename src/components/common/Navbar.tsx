@@ -187,7 +187,7 @@ const Navbar = () => {
                       Contact Me
                       <span>
                         <Image
-                          src="/send.png"
+                          src="/images/send.png"
                           alt="Send icon"
                           width={20}
                           height={20}
@@ -234,7 +234,7 @@ const Navbar = () => {
               Contact Me
               <span>
                 <Image
-                  src="/send.png"
+                  src="/images/send.png"
                   width={20}
                   height={20}
                   alt="Send icon"

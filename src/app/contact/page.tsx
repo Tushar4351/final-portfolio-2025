@@ -16,7 +16,7 @@ export default function ContactPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="w-full lg:w-1/2 mt-16 lg:mt-0 h-[500px] sm:h-[710px] lg:h-full"
+            className="w-full h-[500px] sm:h-[710px] lg:h-full"
           >
             <motion.div
               className="h-full lg:sticky lg:top-0 relative overflow-hidden"
@@ -31,7 +31,7 @@ export default function ContactPage() {
                 width={800}
                 height={600}
                 className="object-cover rounded-xl w-full h-full"
-                src="/images/tushar_bhowal.jpg"
+                src="/images/Tushar.jpg"
                 alt="Tushar image"
               />
             </motion.div>
@@ -39,8 +39,8 @@ export default function ContactPage() {
         }
       >
         {/* right-side children */}
-     <ContactForm />
-          <MyInformation />
+        <ContactForm />
+        <MyInformation />
       </TwoColumnLayout>
     </MainLayout>
   );

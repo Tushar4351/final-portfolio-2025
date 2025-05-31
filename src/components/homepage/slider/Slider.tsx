@@ -5,9 +5,9 @@ import SliderItem from "./SliderItem";
 import SliderIndicators from "./SliderIndicators";
 import SliderControls from "./SliderControls";
 const images = [
-  "/Tushar.jpg",
-    "/Tushar1.JPG",
- // "https://images.unsplash.com/photo-1534528741775-53994a69daeb",
+  "/images/Tushar.jpg",
+  "/images/home/Tushar1.JPG",
+  // "https://images.unsplash.com/photo-1534528741775-53994a69daeb",
 ];
 
 const Slider = () => {

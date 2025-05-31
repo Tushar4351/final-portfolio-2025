@@ -12,7 +12,7 @@ const StepProcess = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.8 }}
-      className="w-full flex flex-col rounded-xl bg-secondary py-8 md:py-12"
+      className="w-full flex flex-col rounded-xl bg-secondary py-6 md:pt-10 md:pb-6"
     >
       {/* Header Section */}
       <motion.div

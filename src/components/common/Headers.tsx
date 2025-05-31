@@ -49,11 +49,9 @@ export const HomeHeader = () => {
             <p className="text-gray-500">Software Developer</p>
           </div>
         </div>
-        <div className="p-2">
-          <p className="text-primary">
-            I'm Tushar Bhowal, a software developer from India. I create
-            innovative, impactful solutions by blending creativity and
-            functionality in every project.
+        <div className="">
+          <p className="text-primary lg:text-[1vw]">
+            I'm Tushar Bhowal, a software developer from India. I build impactful solutions by blending creativity with functionality, and I integrate AI to automate workflows and enhance user experiences.
           </p>
         </div>
       </div>

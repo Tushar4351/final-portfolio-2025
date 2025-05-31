@@ -11,7 +11,7 @@ const Services = () => {
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 0.1 * 3 }}
-      className="flex flex-col space-y-4 rounded-xl h-[500px] md:h-[400px] lg:h-[320px]  bg-secondary"
+      className="flex flex-col space-y-4 rounded-xl h-[600px] md:h-[500px] lg:h-[400px]  bg-secondary"
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -24,8 +24,10 @@ const Services = () => {
         </h1>
         <p className=" md:w-1/2">
           I create software solutions, specialize in web technologies, design
-          responsive UIs, manage teams, and deliver impactful projects with
-          technical expertise, leadership, and effective communication skills.
+          responsive UIs, manage teams, and deliver impactful
+          projects—leveraging AI to automate tasks and enhance user
+          experiences—driven by technical expertise, leadership, and strong
+          communication.
         </p>
       </motion.div>
       <div className="flex-1 relative" ref={constraintsRef}>
