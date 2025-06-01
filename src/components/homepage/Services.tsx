@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { services } from "@/data/services";
+import { TextAnimate } from "../animations/TextAnimate";
 
 const Services = () => {
   const constraintsRef = useRef(null);
@@ -19,16 +20,27 @@ const Services = () => {
         transition={{ duration: 0.5 }}
         className="px-10 pt-10 md:pb-0 md:px-12 md:pt-12 flex flex-col gap-12 md: md:flex-row "
       >
-        <h1 className="text-2xl md:w-1/2 font-semibold mb-4">
+        <TextAnimate
+          animation="blurIn"
+          as="h1"
+          className="text-2xl md:w-1/2 font-semibold mb-4"
+          delay={0.8}
+        >
           So, What do I even do?
-        </h1>
-        <p className=" md:w-1/2">
+        </TextAnimate>
+        <TextAnimate
+          animation="slideUp"
+          by="word"
+          as="p"
+          className=" md:w-1/2"
+          delay={0.9}
+        >
           I create software solutions, specialize in web technologies, design
           responsive UIs, manage teams, and deliver impactful
           projects—leveraging AI to automate tasks and enhance user
           experiences—driven by technical expertise, leadership, and strong
           communication.
-        </p>
+        </TextAnimate>
       </motion.div>
       <div className="flex-1 relative" ref={constraintsRef}>
         {services.map((service, index) => (

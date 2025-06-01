@@ -1,3 +1,4 @@
+import { NavigationItem } from "@/types";
 import { GoArrowUpRight } from "react-icons/go";
 export const navigationData: NavigationItem[] = [
   {

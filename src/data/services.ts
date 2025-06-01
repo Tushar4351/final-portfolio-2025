@@ -2,6 +2,7 @@ import { HiWindow, HiOutlinePaintBrush } from "react-icons/hi2";
 import { TbCodeCircle2 } from "react-icons/tb";
 import { SiEngadget } from "react-icons/si";
 import { PiUserSoundBold, PiHandFist } from "react-icons/pi";
+import { Service } from "@/types";
 
 export const services: Service[] = [
   { id: 1, title: "Frontend", icon: HiWindow, top: "5%", left: "5%" },

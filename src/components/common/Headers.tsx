@@ -6,6 +6,7 @@ import { GoArrowUpRight, GoArrowDown } from "react-icons/go";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { MainHeadingProps, SectionHeadingProps } from "@/types";
+import { TextAnimate } from "../animations/TextAnimate";
 
 export const HomeHeader = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -43,16 +44,36 @@ export const HomeHeader = () => {
             />
           </div>
           <div>
-            <h1 className="text-xl font-semibold text-gray-900">
+            <TextAnimate
+              animation="blurIn"
+              as="h1"
+              className="text-xl font-semibold text-gray-900"
+              delay={0.5}
+            >
               Tushar Bhowal
-            </h1>
-            <p className="text-gray-500">Software Developer</p>
+            </TextAnimate>
+            <TextAnimate
+              animation="blurIn"
+              as="p"
+              className="text-gray-500"
+              delay={0.6}
+            >
+              Software Developer
+            </TextAnimate>
           </div>
         </div>
         <div className="">
-          <p className="text-primary lg:text-[1vw]">
-            I'm Tushar Bhowal, a software developer from India. I build impactful solutions by blending creativity with functionality, and I integrate AI to automate workflows and enhance user experiences.
-          </p>
+          <TextAnimate
+            animation="slideUp"
+            by="word"
+            as="p"
+            className="text-primary lg:text-[1vw]"
+            delay={0.7}
+          >
+            I'm Tushar Bhowal, a software developer from India. I build
+            impactful solutions by blending creativity with functionality, and I
+            integrate AI to automate workflows and enhance user experiences.
+          </TextAnimate>
         </div>
       </div>
     </>
@@ -150,8 +171,12 @@ export const MainHeading: React.FC<MainHeadingProps> = ({
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 0.1 * 4 }}
     >
-      <h1 className="text-3xl">{title}</h1>
-      <p className="">{description}</p>
+      <TextAnimate animation="blurIn" as="h1" className="text-3xl" delay={0.6}>
+        {title}
+      </TextAnimate>
+      <TextAnimate animation="slideUp" by="word" as="p" delay={0.7}>
+        {description}
+      </TextAnimate>
     </motion.div>
   );
 };

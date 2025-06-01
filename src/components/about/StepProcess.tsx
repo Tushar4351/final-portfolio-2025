@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Steps from "./Steps";
 import { useState } from "react";
 import { steps } from "@/data/sections";
+import { TextAnimate } from "../animations/TextAnimate";
 const StepProcess = () => {
   const [isHovered, setIsHovered] = useState(false);
   return (
@@ -22,7 +23,14 @@ const StepProcess = () => {
       >
         <div className="text-6xl sm:text-9xl font-bold ">4</div>
         <div>
-          <h2 className="text-md sm:text-2xl font-medium mb-2">Step process</h2>
+          <TextAnimate
+            animation="blurIn"
+            as="h1"
+            className="text-md sm:text-2xl font-medium mb-2"
+          >
+            Step process
+          </TextAnimate>
+
           <p className="text-sm t">
             A proven workflow{" "}
             <span className="text-white/60">that ensures </span>

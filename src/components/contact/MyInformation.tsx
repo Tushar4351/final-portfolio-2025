@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { GoArrowUpRight } from "react-icons/go";
 import Link from "next/link";
@@ -14,11 +13,12 @@ const MyInformation = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="grid md:grid-cols-2 gap-3"
+        className="grid md:grid-cols-2 gap-2 items-stretch"
       >
+        {/* left */}
         <div className="col-span-1 flex flex-col md:flex-row">
           <motion.div
-            className="relative"
+            className="relative w-full h-64 py-[2px]"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{
@@ -31,19 +31,21 @@ const MyInformation = () => {
             <Link
               href="https://maps.apple.com/?address=Ichapur,%20North%20Barrackpur,%20743144,%20West%20Bengal,%20India&auid=1375702232826506223&ll=22.805642,88.372861&lsp=7618&q=My%20Location&t=m"
               passHref
+              className="block w-full h-full"
             >
-              <motion.div>
+              <motion.div className="w-full h-full">
                 <motion.div
                   initial={{ scale: 0.5, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
+                  className="w-full h-full"
                 >
                   <Image
                     src="/images/contact/location.png"
                     alt="my location"
                     width={500}
-                    height={600}
-                    className="h-full w-full object-cover rounded-xl"
+                    height={400}
+                    className="w-full h-full object-cover rounded-xl"
                   />
                 </motion.div>
               </motion.div>
@@ -55,20 +57,22 @@ const MyInformation = () => {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
+                className="w-full h-full flex items-center justify-center"
               >
                 <Image
                   src="/images/contact/face.png"
                   alt="my logo"
-                  width={50}
-                  height={0}
-                  className="size-18"
+                  width={72}
+                  height={72}
+                  className="w-18 h-18 object-cover"
                 />
               </motion.div>
             </div>
           </motion.div>
         </div>
-        <div className="col-span-1">
-          <div className="flex flex-col gap-2">
+        {/* right */}
+        <div className="col-span-1 h-64 ">
+          <div className="flex flex-col gap-2 h-full justify-center">
             {socialLinks.map((link) => (
               <Link key={link.id} href={link.url} passHref>
                 <SlidingLogo

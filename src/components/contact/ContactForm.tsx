@@ -3,6 +3,7 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import { FormDatas } from "@/types";
+import { TextAnimate } from "../animations/TextAnimate";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState<FormDatas>({
@@ -20,9 +21,9 @@ export default function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
     setStatus({ type: null, message: "" });
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '';
-    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '';
-    const userID = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '';
+    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
+    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
+    const userID = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
 
     const templateParams = {
       from_name: formData.name,
@@ -74,16 +75,20 @@ export default function ContactForm() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <motion.h1
-          className="text-2xl font-medium mb-10"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
+        <TextAnimate
+          animation="blurIn"
+          className="text-2xl font-medium"
+          delay={0.5}
         >
-          Let&apos;s connect and <br />
+          Let&apos;s connect and
+        </TextAnimate>
+        <TextAnimate
+          animation="blurIn"
+          className="text-2xl font-medium mb-10"
+          delay={0.6}
+        >
           discuss your project!
-        </motion.h1>
-
+        </TextAnimate>
         {status.message && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -97,7 +102,6 @@ export default function ContactForm() {
             {status.message}
           </motion.div>
         )}
-
         <form onSubmit={sendEmail} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <motion.div

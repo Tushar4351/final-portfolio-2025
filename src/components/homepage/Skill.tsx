@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { SkillBar } from "./SkillsBar";
 import { skills } from "@/data/skills";
+import { TextAnimate } from "../animations/TextAnimate";
 
 const Skill = () => {
   return (
@@ -23,13 +24,23 @@ const Skill = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="p-10 md:p-12 flex flex-col gap-12 md: md:flex-row "
       >
-        <h1 className="text-2xl md:w-1/2 font-semibold mb-4">
+        <TextAnimate
+          animation="blurIn"
+          as="h1"
+          className="text-2xl md:w-1/2 font-semibold mb-4"
+        >
           My Skills, your advantage
-        </h1>
-        <p className=" md:w-1/2">
+        </TextAnimate>
+        <TextAnimate
+          animation="slideUp"
+          by="word"
+          as="p"
+          className=" md:w-1/2"
+          delay={0.5}
+        >
           My skills is a blend of creativity and technology, allowing me to
           deliver top-notch development and strategy for every project.
-        </p>
+        </TextAnimate>
       </motion.div>
 
       <div className="space-y-4 p-8 md:p-10 ">

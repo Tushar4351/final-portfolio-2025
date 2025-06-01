@@ -24,7 +24,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={rubik.variable}>
-      <body className="antialiased"><PageTransition>{children}</PageTransition></body>
+      <body className="antialiased">
+        {/* <PageTransition> */}
+          {children}
+        {/* </PageTransition> */}
+      </body>
     </html>
   );
 }

@@ -1,3 +1,4 @@
+import { HamburgerLineVariants, MenuVariants } from "@/types";
 
 export const menuVariants: MenuVariants = {
     closed: { height: "auto", transition: { duration: 0.9, ease: "easeInOut" } },

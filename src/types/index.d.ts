@@ -44,7 +44,7 @@ interface ProjectCardProps {
   backGround: string;
 }
 interface CardProps {
-  id: number;
+  id: string;
   title: string;
   description: string;
   icon: string;
@@ -138,16 +138,22 @@ interface ImageProps {
 interface Project {
   id: string;
   title: string;
-  description: string;
+  shortDescription: string;
   image: string;
+  video?: string;
+  logo: string;
   category: string;
-  details: {
-    client: string;
-    date: string;
-    role: string;
-    technologies: string[];
+  links: {
+    liveUrl?: string;
+    githubUrl?: string;
+    demoUrl?: string;
   };
+  technologies: string[];
   fullDescription: string;
+  features: string[];
+  useCases: string[];
+  purpose: string;
+  date: string;
 }
 
 //menu types
